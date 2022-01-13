@@ -140,6 +140,10 @@ function loadItems() {
         if(getLocalStorageData != null){
             items = JSON.parse(getLocalStorageData); 
 
+             items.filter((element, index)=>{
+                 return element != null
+             })
+
             items.forEach((item, index)=>{
                 let Item = items[index]
 
